@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zogo - Smart Personal Finance</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- PWA Meta Tags (Add these lines) -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3B82F6">
+    
+    
+</head>
+<body class="font-sans bg-gradient-to-br from-gray-50 to-blue-50">
+    <!-- Animated Background Elements -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden z-0">
+        <div class="absolute top-20 left-10 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div class="absolute top-60 right-20 w-64 h-64 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-20 left-1/2 w-64 h-64 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="relative z-50 bg-white/80 backdrop-blur-md shadow-sm py-4 px-6 flex justify-between items-center sticky top-0">
+        <div class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Zogo</div>
+        <div class="hidden md:flex space-x-8">
+            <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Home</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Features</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Pricing</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Resources</a>
+        </div>
+        <div class="flex space-x-4">
+            <button class="px-4 py-2 text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-300 hover:shadow-sm">Login</button>
+            <button class="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">Start Free</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative z-10 py-24 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6 animate__animated animate__fadeInDown">Take Control of Your <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Finances</span></h1>
+            <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto animate__animated animate__fadeIn animate__delay-1s">Our personal finance web app empowers you to track spending and manage budgets effortlessly with beautiful visualizations and smart insights.</p>
+            <div class="flex justify-center space-x-4 animate__animated animate__fadeInUp animate__delay-1s">
+                <button class="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center">
+                    Get Started <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+                <button class="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-all duration-300 flex items-center">
+                    <i class="fas fa-play-circle mr-2"></i> Watch Demo
+                </button>
+            </div>
+            <div class="mt-16 animate__animated animate__fadeIn animate__delay-2s">
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-1 inline-block">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Dashboard preview" class="rounded-xl w-full max-w-4xl border border-gray-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secure Section -->
+    <section id="secure" class="relative z-10 py-20 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 animate__animated animate__fadeInLeft">
+                <div class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full mb-4">
+                    <i class="fas fa-shield-alt mr-2"></i> Secure
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Your Personal Finance Journey Starts Here</h2>
+                <p class="text-lg text-gray-600 mb-6">Bank-level security keeps your financial data safe while making it easily accessible only to you. Manage expenses and income with complete peace of mind.</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> 256-bit encryption</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Two-factor authentication</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Regular security audits</li>
+                </ul>
+                <div class="flex space-x-4">
+                    <button class="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-all duration-300 flex items-center">
+                        Learn More <i class="fas fa-book-open ml-2"></i>
+                    </button>
+                    <button class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center">
+                        Sign Up Free <i class="fas fa-user-plus ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 animate__animated animate__fadeInRight">
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-semibold text-blue-800">Secure Login</h3>
+                        <div class="flex space-x-2">
+                            <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                        </div>
+                    </div>
+                    <form class="space-y-4">
+                        <div class="relative">
+                            <i class="fas fa-envelope absolute left-3 top-3 text-gray-400"></i>
+                            <input type="email" placeholder="Email" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-blue-300">
+                        </div>
+                        <div class="relative">
+                            <i class="fas fa-lock absolute left-3 top-3 text-gray-400"></i>
+                            <input type="password" placeholder="Password" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-blue-300">
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-blue-600 focus:ring-blue-300">
+                                <span class="ml-2 text-sm text-gray-600">Remember me</span>
+                            </label>
+                            <a href="#" class="text-sm text-blue-600 hover:underline">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                            Login <i class="fas fa-sign-in-alt ml-2"></i>
+                        </button>
+                    </form>
+                    <div class="mt-4 text-center text-sm text-gray-500">
+                        Don't have an account? <a href="#" class="text-blue-600 hover:underline">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manage Section -->
+    <section id="manage" class="relative z-10 py-20 px-6 bg-white/80 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full mb-4 animate__animated animate__fadeIn">
+                <i class="fas fa-chart-line mr-2"></i> Track & Manage
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 animate__animated animate__fadeIn">Effortless Money Management</h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto animate__animated animate__fadeIn">Our intuitive interface makes tracking income and expenses as simple as a few taps. Stay in complete control of your financial life.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 animate__animated animate__fadeInLeft">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-money-bill-wave text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Add Expenses</h3>
+                    <p class="text-gray-600 mb-6">Quickly input your expenses with smart suggestions and receipt scanning to keep your budget always updated.</p>
+                    <button class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 flex items-center mx-auto">
+                        + Add Expense <i class="fas fa-plus ml-2"></i>
+                    </button>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 animate__animated animate__fadeInRight">
+                    <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-wallet text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Edit Income</h3>
+                    <p class="text-gray-600 mb-6">Modify your income entries with flexible options for recurring, variable, and one-time income sources.</p>
+                    <button class="px-6 py-3 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 flex items-center mx-auto">
+                        Edit Income <i class="fas fa-edit ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-4 animate__animated animate__fadeInUp">
+                <button class="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-all duration-300 flex items-center">
+                    See All Features <i class="fas fa-chevron-right ml-2"></i>
+                </button>
+                <button class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center">
+                    Sign Up Free <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section id="insights" class="relative z-10 py-20 px-6 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full mb-4 animate__animated animate__fadeIn">
+                <i class="fas fa-chart-pie mr-2"></i> Visual Insights
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 animate__animated animate__fadeIn">Beautiful Financial Visualizations</h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto animate__animated animate__fadeIn">Transform your raw numbers into actionable insights with our stunning, interactive visualizations.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 animate__animated animate__fadeIn">
+                    <div class="h-48 mb-6 flex items-center justify-center">
+                        <canvas id="chart1" width="200" height="200"></canvas>
+                    </div>
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-chart-pie text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Spending Breakdown</h3>
+                    <p class="text-gray-600 mb-4">See exactly where your money goes with beautiful category visualizations.</p>
+                    <button class="mt-4 px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-all duration-300">Learn More</button>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 animate__animated animate__fadeIn animate__delay-1s">
+                    <div class="h-48 mb-6 flex items-center justify-center">
+                        <canvas id="chart2" width="200" height="200"></canvas>
+                    </div>
+                    <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-filter text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Smart Filters</h3>
+                    <p class="text-gray-600 mb-4">Slice and dice your data with powerful time and category filters.</p>
+                    <button class="mt-4 px-6 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300">Sign Up</button>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 animate__animated animate__fadeIn animate__delay-2s">
+                    <div class="h-48 mb-6 flex items-center justify-center">
+                        <canvas id="chart3" width="200" height="200"></canvas>
+                    </div>
+                    <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-tags text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Custom Categories</h3>
+                    <p class="text-gray-600 mb-4">Create personalized categories that match your lifestyle.</p>
+                    <button class="mt-4 px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="relative z-10 py-20 px-6 bg-white/80 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full mb-4">
+                <i class="fas fa-star mr-2"></i> Loved By Thousands
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">What Our Users Say</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-500">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Sarah Johnson</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-left">"Zogo completely transformed how I manage my money. The visual reports helped me identify unnecessary spending and save 20% more each month!"</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-500">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Michael Chen</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-left">"As a freelancer, tracking irregular income was always stressful. Zogo's flexible system made it effortless to see my financial picture at a glance."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative z-10 py-20 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Finances?</h2>
+            <p class="text-xl text-blue-100 mb-10">Join thousands of users who are taking control of their financial future with Zogo.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="px-8 py-4 bg-white text-blue-600 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 font-semibold flex items-center">
+                    Get Started - It's Free <i class="fas fa-arrow-right ml-3"></i>
+                </button>
+                <button class="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-all duration-300 flex items-center">
+                    <i class="fas fa-play-circle mr-3"></i> Watch Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-gray-900 text-white py-16 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-5 gap-12">
+            <div class="md:col-span-2">
+                <div class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-4">Zogo</div>
+                <p class="text-gray-400 mb-6">Empowering your financial journey with intuitive tools and beautiful insights.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors duration-300">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Product</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Pricing</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Mobile App</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Company</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Careers</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Press</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Support</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Help Center</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <p>&copy; 2023 Zogo Finance. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
